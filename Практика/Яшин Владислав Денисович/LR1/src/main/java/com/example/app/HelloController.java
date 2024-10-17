@@ -16,4 +16,14 @@ public class HelloController {
 
         return result;
     }
+
+    //Функция для вывода значений в консоль
+    public void printTable(Map<Double, Double> result) {
+        System.out.println("-------------------------");
+        System.out.println(" x                   y ");
+        for (Map.Entry<Double, Double> entry : result.entrySet()) {
+            System.out.printf("|%5.2f      |      %5.2f|\n" , entry.getKey(), entry.getValue());
+            System.out.println("-------------------------");
+        }
+    }
 }

@@ -47,6 +47,9 @@ public class HelloApplication extends Application {
         HelloController controller = new HelloController();
         Map<Double, Double> map = new HashMap<>(controller.func(a1,b1,a2,b2,a3,b3,xn,xk,dk));
 
+        //Вывод таблицы в консоль
+        controller.printTable(map);
+
         //Добавленние точек на график
         for(Map.Entry<Double, Double> entry : map.entrySet()) {
             series.getData().add(new XYChart.Data(entry.getKey(),entry.getValue()));
